@@ -24,3 +24,15 @@ function actualizarListaAmigos() {
         listaAmigos.appendChild(li);
     }
 }
+
+function sortearAmigos() {
+    if (amigos.length === 0) {
+        alert("No hay amigos para sortear.");
+    } else {
+        let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+        let amigoSorteado = amigos[indiceAleatorio];
+
+        let resultadoSorteo = document.getElementById("resultado");
+        resultadoSorteo.innerHTML = `<h2>Amigo secreto: ${amigoSorteado}</h2>`;
+    }
+}
